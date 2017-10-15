@@ -1,6 +1,11 @@
 # coursera-aml-docker
 Docker container with Jupyter Environment for Coursera "Advanced Machine Learning" course.
 
+## Install Stable Docker Community Edition
+For Mac: https://docs.docker.com/docker-for-mac/install/
+For Windows: https://docs.docker.com/docker-for-windows/install/
+For Linux: https://docs.docker.com/engine/installation/
+
 ## Running container for the first time
 Run using `docker run -it -p 8080:8080 --name coursera-aml-1 zimovnov/coursera-aml-docker`.
 This command downloads the prepared image from a public hub and starts a Jupyter for you. 
