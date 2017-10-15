@@ -29,6 +29,5 @@ You can make sure that it's saved by running `docker images`.
 
 ## Starting container from previous state
 If you want to continue working where you left off, you should run the container from your
-saved image by executing `docker run -it -p 8080:8080 --name coursera-aml-2 -d coursera-aml-snap-1`.
+saved image by executing `docker run -it -p 8080:8080 --name coursera-aml-2 coursera-aml-snap-1`.
 Notice that we incremented index in the container name.
-You can then attach to that container using `docker attach coursera-aml-2`.
