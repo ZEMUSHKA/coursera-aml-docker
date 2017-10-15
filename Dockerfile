@@ -6,6 +6,7 @@ RUN apt-get update
 RUN apt-get install -y -q python3-pip htop nano
 RUN pip3 install -r requirements.txt
 RUN jupyter contrib nbextension install --user
+RUN jupyter nbextension enable codefolding/main
 
 RUN useradd -m learner
 USER learner
