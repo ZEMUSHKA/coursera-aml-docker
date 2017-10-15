@@ -4,13 +4,15 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 # install apt packages
 RUN apt-get update
-RUN apt-get install -yq python3-pip htop nano git
+RUN apt-get install -yq python3-pip htop nano git wget
 
 # install python modules
 ADD requirements.txt /
+RUN pip3 install --upgrade pip
 RUN pip3 install -r requirements.txt
 
 # setup juptyer
+RUN jupyter nbextension enable --py --sys-prefix widgetsnbextension
 RUN jupyter contrib nbextension install --user
 RUN jupyter nbextension enable codefolding/main
 RUN echo "c.NotebookApp.ip = '*'" >> /root/.jupyter/jupyter_notebook_config.py
