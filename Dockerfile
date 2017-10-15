@@ -4,12 +4,15 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update
 RUN apt-get install -y -q python3-pip htop nano
+
 RUN pip3 install -r requirements.txt
+
 RUN jupyter contrib nbextension install --user
 RUN jupyter nbextension enable codefolding/main
+RUN echo "c.NotebookApp.ip = '*'" >> /root/.jupyter/jupyter_notebook_config.py
+RUN echo "c.NotebookApp.port = '8080'" >> /root/.jupyter/jupyter_notebook_config.py
+RUN echo "c.NotebookApp.token = ''" >> /root/.jupyter/jupyter_notebook_config.py
 
-RUN useradd -m learner
-USER learner
-WORKDIR /home/learner
+WORKDIR /root
 EXPOSE 8080
-CMD ["jupyter", "notebook", "--no-browser", "--port", "8080", "--ip", "0.0.0.0"]
+CMD ["jupyter", "notebook", "--no-browser", "--allow-root"]
