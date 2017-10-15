@@ -4,7 +4,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 # install apt packages
 RUN apt-get update
-RUN apt-get install -y -q python3-pip htop nano
+RUN apt-get install -y -q python3-pip htop nano git
 
 # install python modules
 ADD requirements.txt /
