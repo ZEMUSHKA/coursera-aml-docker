@@ -2,6 +2,7 @@ FROM ubuntu:16.04
 LABEL maintainer="Zimovnov Andrey <zimovnov@gmail.com>"
 ARG DEBIAN_FRONTEND=noninteractive
 
+ADD requirements.txt /
 RUN apt-get update
 RUN apt-get install -y -q python3-pip htop nano
 
