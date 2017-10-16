@@ -4,7 +4,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 # install apt packages
 RUN apt-get update
-RUN apt-get install -yq python3-pip htop nano git wget
+RUN apt-get install -yq python3-pip htop nano git wget libglib2.0-0
 
 # install python modules
 ADD requirements.txt /
