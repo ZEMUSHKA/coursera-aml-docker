@@ -1,5 +1,5 @@
 # coursera-aml-docker
-Docker container with Jupyter Environment for Coursera "Advanced Machine Learning" course.
+Docker container with Jupyter Environment for Coursera "Advanced Machine Learning" specialization: https://www.coursera.org/specializations/aml
 
 ## Install Stable Docker Community Edition
 For Mac: https://docs.docker.com/docker-for-mac/install/
