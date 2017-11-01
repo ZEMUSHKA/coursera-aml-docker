@@ -15,3 +15,4 @@ scikit-learn==0.18.2
 scipy==0.18.1
 tensorflow==1.2.1
 tqdm==4.15.0
+ffmpeg==3.2.4

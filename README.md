@@ -4,7 +4,11 @@ Docker container with Jupyter Environment for Coursera "Advanced Machine Learnin
 ## Install Stable Docker Community Edition
 For Mac: https://docs.docker.com/docker-for-mac/install/
 
-For Windows: https://docs.docker.com/docker-for-windows/install/
+For Windows (64bit Windows 10 Pro, Enterprise and Education):
+https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install
+
+For Windows (older versions):
+https://docs.docker.com/toolbox/toolbox_install_windows/
 
 For Linux: https://docs.docker.com/engine/installation/
 
