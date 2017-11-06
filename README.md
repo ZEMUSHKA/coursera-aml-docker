@@ -20,18 +20,28 @@ Let this command continue running in the terminal while you work with Jupyter.
 
 You can now navigate to <http://localhost:8080> in your browser to see Jupyter.
 
-## Saving container state
-If you need to take a break you can do so by pressing `Ctrl+C` in terminal window 
-running Jupyter in docker container. 
-You may need to press it several times to finally exit Jupyter.
+## Stopping and starting the container
+This "stop and start" scenario is useful when you want to take a break and turn off your host machine.
 
-Then you execute `exit` in that window to stop a docker container.
+### Stopping the container
+Save your work inside the container, then run `docker stop coursera-aml-1` in different terminal window 
+to stop a running container. You will be able to start it later.
 
+### Starting container after stopping
+Run `docker start -a coursera-aml-1` to run previously stopped container and attach to its stdout.
+You can continue to work where you left off.
+
+## Container checkpoints
+You might want to make a checkpoint of your work so that you can return to it later.
+Think of it as a backup or commit in version control system.
+
+### Saving container state
+You will first have to stop the container following instructions above.
 Now you need to save the container state so that you can return to it later:
 `docker commit coursera-aml-1 coursera-aml-snap-1`. 
 You can make sure that it's saved by running `docker images`.
 
-## Starting container from previous state
-If you want to continue working where you left off, you should run the container from your
+### Creating new container from previous checkpoint
+If you want to continue working from a particular checkpoint, you should run a new container from your
 saved image by executing `docker run -it -p 127.0.0.1:8080:8080 --name coursera-aml-2 coursera-aml-snap-1`.
-Notice that we incremented index in the container name.
+Notice that we incremented index in the container name, because we created a new container.
