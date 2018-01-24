@@ -50,8 +50,17 @@ Notice that we incremented index in the container name, because we created a new
 You can use NVIDIA GPU in your container on Linux host machine.
 - Setup docker following instructions from NVIDIA: 
 https://github.com/NVIDIA/nvidia-docker/wiki/Installation-(version-2.0)#prerequisites
-- Replace CPU TensorFlow version with the one that supports GPU:
+- In your container replace CPU TensorFlow version with the one that supports GPU:
 ```
 pip3 uninstall tensorflow
 pip3 install tensorflow-gpu==1.2.1
 ```
+- You will also have to install NVIDIA GPU driver, CUDA toolkit and CuDNN 
+(requires registration with NVIDIA) 
+in your container in order for TensorFlow to work with your GPU: 
+https://www.tensorflow.org/versions/r1.2/install/install_linux#nvidia_requirements_to_run_tensorflow_with_gpu_support
+It can be hard to follow, so you might choose to stick to a CPU version, 
+which is also fine for the purpose of this course.
+- TensorFlow provides Docker files with TensorFlow on GPU, but they don't have 
+all the additional dependencies we need, this is for advanced users: 
+https://github.com/tensorflow/tensorflow/tree/master/tensorflow/tools/docker 
