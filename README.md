@@ -45,3 +45,13 @@ You can make sure that it's saved by running `docker images`.
 If you want to continue working from a particular checkpoint, you should run a new container from your
 saved image by executing `docker run -it -p 127.0.0.1:8080:8080 --name coursera-aml-2 coursera-aml-snap-1`.
 Notice that we incremented index in the container name, because we created a new container.
+
+## Using GPU in your container (Linux hosts only)
+You can use NVIDIA GPU in your container on Linux host machine.
+- Setup docker following instructions from NVIDIA: 
+https://github.com/NVIDIA/nvidia-docker/wiki/Installation-(version-2.0)#prerequisites
+- Replace CPU TensorFlow version with the one that supports GPU:
+```
+pip3 uninstall tensorflow
+pip3 install tensorflow-gpu==1.2.1
+```
