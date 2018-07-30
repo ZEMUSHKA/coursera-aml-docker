@@ -20,5 +20,5 @@ RUN echo "c.NotebookApp.port = 8080" >> /root/.jupyter/jupyter_notebook_config.p
 RUN echo "c.NotebookApp.token = ''" >> /root/.jupyter/jupyter_notebook_config.py
 
 WORKDIR /root
-EXPOSE 8080
+EXPOSE 8080 7007
 CMD ["jupyter", "notebook", "--no-browser", "--allow-root"]
