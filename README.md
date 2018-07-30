@@ -20,6 +20,9 @@ Let this command continue running in the terminal while you work with Jupyter.
 
 You can now navigate to <http://localhost:8080> in your browser to see Jupyter.
 
+If you want to use tensorboard in the course, you also need to add an option to publish the port it uses. Run
+`docker run -it -p 127.0.0.1:8080:8080 -p 127.0.0.1:7007:7007 --name coursera-aml-1 zimovnov/coursera-aml-docker` instead.
+
 ## Stopping and starting the container
 This "stop and start" scenario is useful when you want to take a break and turn off your host machine.
 
