@@ -4,12 +4,12 @@ jupyter
 ipywidgets
 jupyter_contrib_nbextensions
 Keras==2.0.6
-matplotlib==2.0.0
+matplotlib==2.0.2
 nltk==3.2.4
 numpy>=1.11.2
 opencv
 pandas==0.19.2
-Pillow==4.0.0
+Pillow==4.3.0
 requests==2.12.4
 scikit-learn==0.18.2
 scipy==0.18.1
